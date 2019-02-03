@@ -1,0 +1,10 @@
+@(message:String,form1:Form[models.Member])
+
+@main("Welcome to Play") {
+  <h1>Welcome to Play!</h1>
+  <p>@message</p>
+  @helper.form(action=routes.HomeController.create){
+      @(helper.inputText(field=form1("name")))
+      <input type="submit">
+  }
+}
